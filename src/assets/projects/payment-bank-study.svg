@@ -1,0 +1,68 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="paybank-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#03001e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7303c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec38bc;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="200" rx="12" fill="url(#paybank-bg)" />
+  
+  <!-- Subtle grid -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.04">
+    <path d="M 0,20 L 400,20 M 0,40 L 400,40 M 0,60 L 400,60 M 0,80 L 400,80 M 0,100 L 400,100 M 0,120 L 400,120 M 0,140 L 400,140 M 0,160 L 400,160 M 0,180 L 400,180" />
+    <path d="M 40,0 L 40,200 M 80,0 L 80,200 M 120,0 L 120,200 M 160,0 L 160,200 M 200,0 L 200,200 M 240,0 L 240,200 M 280,0 L 280,200 M 320,0 L 320,200 M 360,0 L 360,200" />
+  </g>
+
+  <!-- India Digital map nodes/mesh in center -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.2">
+    <line x1="100" y1="90" x2="160" y2="50" />
+    <line x1="160" y1="50" x2="220" y2="70" />
+    <line x1="220" y1="70" x2="300" y2="40" />
+    <line x1="100" y1="90" x2="180" y2="110" />
+    <line x1="180" y1="110" x2="220" y2="70" />
+    <line x1="180" y1="110" x2="300" y2="100" />
+    <line x1="220" y1="70" x2="300" y2="100" />
+  </g>
+  
+  <!-- Mesh Node circles -->
+  <circle cx="100" cy="90" r="4" fill="#00f2fe" filter="url(#glow)" />
+  <circle cx="160" cy="50" r="5" fill="#4facfe" filter="url(#glow)" />
+  <circle cx="220" cy="70" r="6" fill="#ec38bc" filter="url(#glow)" />
+  <circle cx="180" cy="110" r="4" fill="#00f2fe" filter="url(#glow)" />
+  <circle cx="300" cy="40" r="5" fill="#ec38bc" filter="url(#glow)" />
+  <circle cx="300" cy="100" r="4" fill="#4facfe" />
+
+  <!-- Central Rupee and Transaction Ring -->
+  <circle cx="200" cy="75" r="32" fill="#03001e" stroke="#00f2fe" stroke-width="2.5" filter="url(#glow)" />
+  <text x="200" y="86" font-family="Inter, sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle">₹</text>
+
+  <!-- Mobile phone frame sliding in -->
+  <g transform="translate(40, 35)">
+    <rect width="36" height="70" rx="5" fill="#111" stroke="#ffffff" stroke-width="1.5" opacity="0.7" />
+    <!-- Screen check -->
+    <path d="M 12,60 L 18,65 L 28,55" fill="none" stroke="#00f2fe" stroke-width="2" />
+  </g>
+  
+  <!-- Mobile phone right side -->
+  <g transform="translate(320, 50)">
+    <rect width="36" height="70" rx="5" fill="#111" stroke="#ffffff" stroke-width="1.5" opacity="0.7" />
+    <!-- Screen analytics -->
+    <rect x="6" y="15" width="24" height="6" fill="#ec38bc" rx="1" />
+    <rect x="6" y="26" width="24" height="6" fill="#4facfe" rx="1" />
+    <rect x="6" y="37" width="16" height="6" fill="#ffb703" rx="1" />
+  </g>
+
+  <!-- Title/Label text -->
+  <text x="200" y="165" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">PAYMENT BANK STUDY</text>
+  <text x="200" y="182" font-family="Inter, sans-serif" font-size="11" fill="#ec38bc" text-anchor="middle">Opportunities &amp; Challenges of India's Digital Banking Sector</text>
+</svg>

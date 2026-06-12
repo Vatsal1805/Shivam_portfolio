@@ -1,0 +1,81 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="ippb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1b263b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent Gradients -->
+    <linearGradient id="accent-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a86c8;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#005691;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="accent-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9f1c;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#e71d36;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="200" rx="12" fill="url(#ippb-bg)" />
+  
+  <!-- Subtle Grid Pattern in background -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.05">
+    <path d="M 0,20 L 400,20 M 0,40 L 400,40 M 0,60 L 400,60 M 0,80 L 400,80 M 0,100 L 400,100 M 0,120 L 400,120 M 0,140 L 400,140 M 0,160 L 400,160 M 0,180 L 400,180" />
+    <path d="M 40,0 L 40,200 M 80,0 L 80,200 M 120,0 L 120,200 M 160,0 L 160,200 M 200,0 L 200,200 M 240,0 L 240,200 M 280,0 L 280,200 M 320,0 L 320,200 M 360,0 L 360,200" />
+  </g>
+  
+  <!-- Decorative Background Shapes -->
+  <circle cx="360" cy="40" r="60" fill="url(#accent-orange)" opacity="0.15" filter="url(#glow)" />
+  <circle cx="40" cy="160" r="50" fill="url(#accent-blue)" opacity="0.2" filter="url(#glow)" />
+
+  <!-- Phone UI Outline -->
+  <rect x="175" y="40" width="50" height="90" rx="8" fill="#141c2f" stroke="#415a77" stroke-width="2" />
+  <!-- Home Button/Notch -->
+  <line x1="195" y1="45" x2="205" y2="45" stroke="#415a77" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Inner Screen Content -->
+  <rect x="181" y="52" width="38" height="66" rx="2" fill="#0d1b2a" />
+  
+  <!-- Success Payment Circle -->
+  <circle cx="200" cy="85" r="14" fill="url(#accent-orange)" opacity="0.8" />
+  <!-- Rupee Symbol inside circle -->
+  <text x="200" y="90" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">₹</text>
+
+  <!-- Postbox/Envelope Icon on the left -->
+  <g transform="translate(100, 65)">
+    <rect width="45" height="30" rx="4" fill="url(#accent-blue)" />
+    <!-- Envelope flaps -->
+    <path d="M 0,0 L 22.5,15 L 45,0" fill="none" stroke="#e0e1dd" stroke-width="2" />
+    <path d="M 0,30 L 15,15" fill="none" stroke="#e0e1dd" stroke-width="2" />
+    <path d="M 45,30 L 30,15" fill="none" stroke="#e0e1dd" stroke-width="2" />
+  </g>
+  
+  <!-- Transfer Arrow (connecting envelope and phone) -->
+  <path d="M 155,80 C 162,75 168,75 173,80" fill="none" stroke="#ff9f1c" stroke-width="2" stroke-dasharray="4 2" />
+  <polygon points="173,80 167,76 170,82" fill="#ff9f1c" />
+  
+  <!-- Cards/Details on the right -->
+  <g transform="translate(245, 60)" opacity="0.9">
+    <!-- Mini chart bar 1 -->
+    <rect x="0" y="30" width="12" height="15" rx="2" fill="#3a86c8" />
+    <!-- Mini chart bar 2 -->
+    <rect x="18" y="15" width="12" height="30" rx="2" fill="#ff9f1c" />
+    <!-- Mini chart bar 3 -->
+    <rect x="36" y="5" width="12" height="40" rx="2" fill="#e71d36" />
+    <!-- Baseline -->
+    <line x1="-5" y1="45" x2="55" y2="45" stroke="#415a77" stroke-width="1.5" />
+  </g>
+
+  <!-- Title/Label text -->
+  <text x="200" y="165" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#e0e1dd" text-anchor="middle" letter-spacing="0.5">INDIA POST PAYMENTS BANK</text>
+  <text x="200" y="182" font-family="Inter, sans-serif" font-size="11" fill="#778da9" text-anchor="middle">Financial Inclusion &amp; Digital Banking Operations</text>
+</svg>

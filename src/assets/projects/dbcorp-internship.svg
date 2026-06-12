@@ -1,0 +1,92 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="dbcorp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#140505;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d0f0f;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent Gradients -->
+    <linearGradient id="dbcorp-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f25c54;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#d90429;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="dbcorp-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb703;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#fb8500;stop-opacity:0.9" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="200" rx="12" fill="url(#dbcorp-bg)" />
+  
+  <!-- Subtle grid -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.03">
+    <path d="M 0,20 L 400,20 M 0,40 L 400,40 M 0,60 L 400,60 M 0,80 L 400,80 M 0,100 L 400,100 M 0,120 L 400,120 M 0,140 L 400,140 M 0,160 L 400,160 M 0,180 L 400,180" />
+    <path d="M 40,0 L 40,200 M 80,0 L 80,200 M 120,0 L 120,200 M 160,0 L 160,200 M 200,0 L 200,200 M 240,0 L 240,200 M 280,0 L 280,200 M 320,0 L 320,200 M 360,0 L 360,200" />
+  </g>
+
+  <!-- Decorative blur circles -->
+  <circle cx="340" cy="160" r="50" fill="url(#dbcorp-orange)" opacity="0.12" filter="url(#glow)" />
+  <circle cx="60" cy="50" r="45" fill="url(#dbcorp-red)" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Newspaper / Media Frame (Left Side) -->
+  <g transform="translate(70, 45)">
+    <!-- Base Paper Page -->
+    <rect width="70" height="90" rx="4" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2" />
+    <!-- Header banner -->
+    <rect x="6" y="8" width="58" height="12" fill="#d90429" rx="1" />
+    <text x="35" y="17" font-family="Georgia, serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">NEWS</text>
+    
+    <!-- Left Column (Mock text lines) -->
+    <rect x="6" y="26" width="30" height="40" fill="#e9ecef" rx="1" />
+    <line x1="6" y1="72" x2="36" y2="72" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="6" y1="78" x2="26" y2="78" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="6" y1="84" x2="32" y2="84" stroke="#6c757d" stroke-width="1.5" />
+
+    <!-- Right Column (Mock text lines) -->
+    <line x1="42" y1="28" x2="64" y2="28" stroke="#343a40" stroke-width="2" />
+    <line x1="42" y1="34" x2="64" y2="34" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="42" y1="40" x2="60" y2="40" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="42" y1="46" x2="64" y2="46" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="42" y1="52" x2="55" y2="52" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="42" y1="58" x2="64" y2="58" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="42" y1="64" x2="61" y2="64" stroke="#6c757d" stroke-width="1.5" />
+    <line x1="42" y1="70" x2="64" y2="70" stroke="#6c757d" stroke-width="1.5" />
+  </g>
+  
+  <!-- Department Nodes (HR, Finance, Marketing on Right Side) -->
+  <g transform="translate(180, 40)">
+    <!-- Central Node connector line -->
+    <line x1="20" y1="45" x2="70" y2="15" stroke="#495057" stroke-width="2" />
+    <line x1="20" y1="45" x2="70" y2="45" stroke="#495057" stroke-width="2" />
+    <line x1="20" y1="45" x2="70" y2="75" stroke="#495057" stroke-width="2" />
+
+    <!-- Core Business operations hub -->
+    <circle cx="20" cy="45" r="22" fill="#212529" stroke="#d90429" stroke-width="2" />
+    <text x="20" y="49" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">CORP</text>
+    
+    <!-- Marketing (Top) -->
+    <circle cx="70" cy="15" r="16" fill="url(#dbcorp-red)" />
+    <text x="70" y="19" font-family="Inter, sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">MKT</text>
+    
+    <!-- HR (Middle) -->
+    <circle cx="70" cy="45" r="16" fill="url(#dbcorp-orange)" />
+    <text x="70" y="49" font-family="Inter, sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">HR</text>
+    
+    <!-- Finance (Bottom) -->
+    <circle cx="70" cy="75" r="16" fill="#fb8500" />
+    <text x="70" y="79" font-family="Inter, sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">FIN</text>
+  </g>
+
+  <!-- Title/Label text -->
+  <text x="200" y="165" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8f9fa" text-anchor="middle" letter-spacing="0.5">D.B CORP LTD (DIVYA BHASKAR)</text>
+  <text x="200" y="182" font-family="Inter, sans-serif" font-size="11" fill="#a2a2a2" text-anchor="middle">Cross-Functional Media Management &amp; Corporate Operations</text>
+</svg>
